@@ -47,7 +47,7 @@ a:hover {
    ───────────────────────────────────────── */
 .cv-page {
   max-width: var(--page-width);
-  margin: 48px auto;
+  margin: 0px auto;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0, 0, 0, 0.06);
