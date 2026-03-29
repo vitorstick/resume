@@ -16,7 +16,13 @@
 /* ─────────────────────────────────────────
    Reset
    ───────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: var(--font);
@@ -31,7 +37,10 @@ a {
   color: var(--accent);
   text-decoration: none;
 }
-a:hover { text-decoration: underline; }
+
+a:hover {
+  text-decoration: underline;
+}
 
 /* ─────────────────────────────────────────
    Page shell
@@ -41,7 +50,7 @@ a:hover { text-decoration: underline; }
   margin: 48px auto;
   background: #fff;
   border-radius: 4px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0, 0, 0, 0.06);
   padding: 56px 64px;
 }
 
@@ -83,9 +92,17 @@ a:hover { text-decoration: underline; }
   text-align: right;
 }
 
-.cv-header-contact a { color: var(--text-muted); }
-.cv-header-contact a:hover { color: var(--accent); }
-.sep { color: var(--border); }
+.cv-header-contact a {
+  color: var(--text-muted);
+}
+
+.cv-header-contact a:hover {
+  color: var(--accent);
+}
+
+.sep {
+  color: var(--border);
+}
 
 /* ─────────────────────────────────────────
    Divider
@@ -99,14 +116,17 @@ a:hover { text-decoration: underline; }
 /* ─────────────────────────────────────────
    Sections
    ───────────────────────────────────────── */
-.cv-section { margin-bottom: 4px; }
+.cv-section {
+  margin-bottom: 4px;
+}
 
 .cv-section-title {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
+  margin-top: 24px;
   margin-bottom: 18px;
 }
 
@@ -142,7 +162,7 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.04em;
 }
 
-.skills-group > span:last-child {
+.skills-group>span:last-child {
   color: var(--text-muted);
   font-size: 0.88rem;
 }
@@ -269,24 +289,47 @@ a:hover { text-decoration: underline; }
    Print / PDF
    ───────────────────────────────────────── */
 @media print {
-  @page { margin: 15mm 18mm; size: A4; }
+  @page {
+    margin: 0;
+    size: auto;
+  }
 
-  body { background: #fff; font-size: 11pt; }
+  body {
+    background: #fff;
+    font-size: 11pt;
+  }
 
   .cv-page {
     margin: 0;
-    padding: 0;
+    padding: 15mm 18mm;
     box-shadow: none;
     border-radius: 0;
     max-width: 100%;
   }
 
-  .print-btn { display: none !important; }
+  .print-btn {
+    display: none !important;
+  }
 
-  .job, .cv-section { page-break-inside: avoid; break-inside: avoid; }
+  .job,
+  .cv-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 
-  a { color: inherit; }
+  a {
+    color: inherit;
+  }
 
-  .cv-header-name h1 { font-size: 2rem; }
-  .headline { font-size: 0.95rem; }
+  .cv-header-name h1 {
+    font-size: 2rem;
+  }
+
+  .headline {
+    font-size: 0.95rem;
+  }
+
+  .print-extra-space {
+    padding-top: 28px;
+  }
 }
