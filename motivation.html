@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vítor Ferreira - Motivation Letter" />
+    <title>Vítor Ferreira – Motivation Letter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/main-Ctci9KC1.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-CCVkyAXp.css">
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Resume / CV</a>
+      <a href="motivation.html" class="nav-link active">Motivation Letter</a>
+    </nav>
+
+    <div class="edit-hint">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+      <span><strong>Editable Page:</strong> Click any text below (date, recipient, subject, or letter text) to edit inline before printing or copying.</span>
+      <button id="reset-letter-btn" style="margin-left: auto; background: none; border: none; color: #1e40af; text-decoration: underline; font-size: 0.8rem; cursor: pointer;">Reset text</button>
+    </div>
+
+    <div class="cv-page letter-page" id="editable-letter-container">
+
+      <!-- TOP HEADER -->
+      <header class="cv-header">
+        <div class="cv-header-name">
+          <h1>Vítor Ferreira</h1>
+          <p class="headline">Staff Frontend Engineer</p>
+        </div>
+        <div class="cv-header-contact">
+          <a href="mailto:vitor.rsf@gmail.com">vitor.rsf@gmail.com</a>
+          <span class="sep">·</span>
+          <span>+351 966 090 693</span>
+          <span class="sep">·</span>
+          <span>Amsterdam, Netherlands</span>
+          <span class="sep">·</span>
+          <a href="https://pt.linkedin.com/in/vitorsferreira" target="_blank">linkedin.com/in/vitorsferreira</a>
+          <span class="sep">·</span>
+          <a href="https://github.com/vitorstick" target="_blank">github.com/vitorstick</a>
+          <span class="sep">·</span>
+          <a href="https://www.vitorspace.com" target="_blank">vitorspace.com</a>
+        </div>
+      </header>
+
+      <div class="cv-divider"></div>
+
+      <!-- LETTER METADATA -->
+      <section class="letter-meta">
+        <div class="letter-date" contenteditable="true" id="letter-date">August 4, 2026 · Amsterdam</div>
+        <div class="letter-recipient" contenteditable="true" id="letter-recipient">
+          <p><strong>To:</strong> Hiring Manager &amp; Selection Committee</p>
+          <p><strong>Company:</strong> [Company Name]</p>
+        </div>
+        <div class="letter-subject" contenteditable="true" id="letter-subject">
+          <strong>Subject:</strong> Application for Frontend Developer Position
+        </div>
+      </section>
+
+      <div class="cv-divider"></div>
+
+      <!-- LETTER BODY -->
+      <section class="letter-body" contenteditable="true" id="letter-body">
+        <p class="cv-text">
+          Dear Hiring Manager,
+        </p>
+
+        <p class="cv-text">
+          I am excited to apply for the position of Frontend Developer at <strong>[Company Name]</strong>.
+        </p>
+
+        <p class="cv-text">
+          As a senior frontend developer with 10+ years of experience, I have developed a deep passion for creating beautiful, highly responsive, performant, and user-friendly web applications. Throughout my career, I have honed my skills across the modern web stack, including advanced proficiency in HTML, CSS (SCSS), JavaScript (ES6+), and TypeScript, as well as extensive expertise in frontend frameworks such as Angular and React.
+        </p>
+
+        <p class="cv-text">
+          In my previous positions, I have developed and maintained multiple web applications that require strong attention to detail, a deep understanding of web technologies, and seamless collaboration with cross-functional teams. My passion for frontend development drives me to stay up-to-date with the latest industry trends, modern best practices, and emerging technologies to deliver the best user experience possible.
+        </p>
+
+        <p class="cv-text">
+          Beyond individual contribution, I am committed to helping junior developers become more proficient in their positions, and I genuinely enjoy passing my experience on to others and mentoring team members.
+        </p>
+
+        <p class="cv-text">
+          I look forward to the opportunity to further discuss my qualifications and how I can contribute to your team. Thank you for considering my application. I am excited about the possibility of working with <strong>[Company Name]</strong> and contributing to your continued success.
+        </p>
+
+        <p class="cv-text">
+          Sincerely,
+        </p>
+
+        <p class="cv-text letter-signature">
+          <strong>Vítor Ferreira</strong><br>
+          <span style="color: var(--text-muted); font-size: 0.9rem;">Staff Frontend Engineer</span>
+        </p>
+      </section>
+
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+      <button class="action-btn secondary-btn" id="copy-text-btn" aria-label="Copy text to clipboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        Copy Text
+      </button>
+
+      <button class="action-btn" onclick="window.print()" aria-label="Export to PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Export PDF
+      </button>
+    </div>
+
+    <script>
+      // Auto-save edited content to localStorage so changes persist across refresh
+      const editableIds = ['letter-date', 'letter-recipient', 'letter-subject', 'letter-body'];
+
+      editableIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        const saved = localStorage.getItem('vf_motivation_v2_' + id);
+        if (saved) {
+          el.innerHTML = saved;
+        }
+
+        el.addEventListener('input', () => {
+          localStorage.setItem('vf_motivation_v2_' + id, el.innerHTML);
+        });
+      });
+
+      document.getElementById('reset-letter-btn')?.addEventListener('click', () => {
+        if (confirm('Reset letter text to default version?')) {
+          editableIds.forEach(id => localStorage.removeItem('vf_motivation_v2_' + id));
+          window.location.reload();
+        }
+      });
+
+      // Copy text to clipboard logic
+      document.getElementById('copy-text-btn')?.addEventListener('click', () => {
+        const date = document.getElementById('letter-date')?.innerText.trim() || '';
+        const recipient = document.getElementById('letter-recipient')?.innerText.trim() || '';
+        const subject = document.getElementById('letter-subject')?.innerText.trim() || '';
+        const body = document.getElementById('letter-body')?.innerText.trim() || '';
+
+        const fullText = `${date}\n\n${recipient}\n\n${subject}\n\n${body}`;
+
+        navigator.clipboard.writeText(fullText).then(() => {
+          const btn = document.getElementById('copy-text-btn');
+          if (btn) {
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!`;
+            setTimeout(() => {
+              btn.innerHTML = originalHTML;
+            }, 2000);
+          }
+        }).catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+      });
+    </script>
+  </body>
+</html>
