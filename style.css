@@ -43,16 +43,136 @@ a:hover {
 }
 
 /* ─────────────────────────────────────────
+   Navigation
+   ───────────────────────────────────────── */
+.site-nav {
+  max-width: var(--page-width);
+  margin: 32px auto 20px auto;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(26, 86, 219, 0.25);
+}
+
+/* ─────────────────────────────────────────
    Page shell
    ───────────────────────────────────────── */
 .cv-page {
   max-width: var(--page-width);
-  margin: 0px auto;
+  margin: 0px auto 48px auto;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0, 0, 0, 0.06);
   padding: 56px 64px;
 }
+
+/* ─────────────────────────────────────────
+   Motivation Letter Styles
+   ───────────────────────────────────────── */
+.edit-hint {
+  max-width: var(--page-width);
+  margin: -8px auto 16px auto;
+  padding: 8px 14px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #1e40af;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+[contenteditable="true"] {
+  outline: 1px dashed transparent;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+  transition: outline 0.15s ease, background 0.15s ease;
+  cursor: text;
+}
+
+[contenteditable="true"]:hover {
+  outline: 1px dashed #93c5fd;
+  background: rgba(26, 86, 219, 0.02);
+}
+
+[contenteditable="true"]:focus {
+  outline: 2px solid var(--accent);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+}
+
+.letter-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.93rem;
+  color: var(--text-dark);
+}
+
+.letter-date {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.letter-recipient p {
+  margin: 2px 0;
+}
+
+.letter-subject {
+  margin-top: 4px;
+  padding: 8px 12px;
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.95rem;
+}
+
+.letter-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.letter-body p {
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.letter-signature {
+  margin-top: 12px;
+}
+
 
 /* ─────────────────────────────────────────
    Header
@@ -253,36 +373,62 @@ a:hover {
 }
 
 /* ─────────────────────────────────────────
-   Export Button
+   Export & Action Buttons
    ───────────────────────────────────────── */
-.print-btn {
+.floating-actions {
   position: fixed;
   bottom: 36px;
   right: 36px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 100;
+}
+
+.action-btn,
+.print-btn {
   display: flex;
   align-items: center;
   gap: 8px;
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 12px 22px;
+  padding: 12px 20px;
   border-radius: 6px;
   font-family: var(--font);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(26, 86, 219, 0.4);
-  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 14px rgba(26, 86, 219, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s, color 0.15s;
+  text-decoration: none;
 }
 
+.action-btn.secondary-btn {
+  background: #ffffff;
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.action-btn.secondary-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #f8fafc;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+}
+
+.action-btn svg,
 .print-btn svg {
   width: 17px;
   height: 17px;
 }
 
+.action-btn:hover,
 .print-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(26, 86, 219, 0.5);
+  box-shadow: 0 8px 20px rgba(26, 86, 219, 0.45);
 }
 
 /* ─────────────────────────────────────────
@@ -307,8 +453,20 @@ a:hover {
     max-width: 100%;
   }
 
-  .print-btn {
+  .print-btn,
+  .action-btn,
+  .floating-actions,
+  .site-nav,
+  .edit-hint {
     display: none !important;
+  }
+
+  [contenteditable="true"] {
+    outline: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
   }
 
   .job,

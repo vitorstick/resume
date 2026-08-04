@@ -1,13 +1,20 @@
 # Vítor Ferreira - Digital Resume
 
-This is the source code for my digital Curriculum Vitae. It is designed as a single-page web application that is easy to read, print, and export as a PDF.
+This is the source code for my digital Curriculum Vitae and Motivation Letter. It is designed as a multi-page web application that is easy to read, navigate, print, and export as a PDF.
+
+## Pages & Routes
+
+- **Resume / CV**: `index.html` (`/`)
+- **Motivation Letter**: `motivation.html` (`/motivation.html`)
+
+A top navigation bar allows seamlessly switching between pages. Navigation elements are automatically hidden when exporting to PDF or printing.
 
 ## Tech Stack
 
 The project relies on a minimal, high-performance stack focusing on simplicity and maintainability:
 - **HTML5**: Semantic and accessible structure.
 - **Vanilla CSS3**: Custom styles, responsive grid, flexbox, and print-specific CSS rules. No heavy frameworks are used.
-- **Vite**: A lightning-fast development server and build tool that bundles the assets seamlessly.
+- **Vite**: A lightning-fast development server and multi-page build tool that bundles static assets seamlessly into `dist/`.
 
 ## Getting Started
 
